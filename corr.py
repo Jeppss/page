@@ -23,4 +23,3 @@ y = np.array(y)
 
 
 r = np.corrcoef(x, y)
-print(r)
