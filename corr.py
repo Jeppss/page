@@ -1,22 +1,22 @@
 import pandas_datareader as pdr
 import numpy as np
 
-filecoin = pdr.DataReader(("NBX.OL"),
+stock1 = pdr.DataReader(("NBX.OL"),
                        start='2022-1-1', 
                        end='2022-5-1', 
                        data_source='yahoo')['Close']
 x = list()
-for i in filecoin:
+for i in stock1:
     x.append(i)
 x = np.array(x)
 
-dltx = pdr.DataReader(("DLTX.OL"),
+stock2 = pdr.DataReader(("DLTX.OL"),
                     start='2022-1-1',
                     end='2022-5-1',
                     data_source='yahoo')['Close']
 
 y = list()
-for i in dltx:
+for i in stock2:
     y.append(i)
 
 y = np.array(y)
